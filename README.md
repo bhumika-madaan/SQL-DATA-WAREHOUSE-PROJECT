@@ -89,4 +89,4 @@ This project is part of my practical learning journey in SQL, data warehousing, 
 
 This data warehouse project is connected to my SQL Data Analytics and Power BI dashboard project - SalesScope Analytics, which focuses on analyzing sales performance, customer behaviour, and product performance through interactive dashboards.
 
- "SalesScope Analytics – SQL Data Analytics Project" (https://github.com/bhumika-madaan/SaleScope_Analytics)
+ SalesScope Analytics – [View Repository](https://github.com/bhumika-madaan/SaleScope_Analytics)
