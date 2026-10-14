@@ -17,7 +17,9 @@ The repository includes datasets, project documentation, SQL scripts, and tests 
 - Write SQL queries to explore data and generate useful insights.
 - Follow a structured and maintainable project organization.
 
-## Data Warehouse Architecture
+## Data Warehouse
+
+### Data Warehouse Architecture
 <img src="doc/Data Architecture.jpg" width=800 height=500>
 The project follows a Medallion Architecture with three layers:
 
@@ -25,7 +27,37 @@ The project follows a Medallion Architecture with three layers:
 - **Silver Layer:** Cleans, standardizes, and transforms data.
 - **Gold Layer:** Organizes processed data into business-ready
   fact and dimension views.
-  
+
+ ### Data Sources
+
+The data warehouse integrates data from two source systems:
+
+- **CRM:** Provides customer, product, and sales-related data.
+- **ERP:** Provides additional business information used to enrich and analyze the data.
+
+The source datasets are processed through the Bronze, Silver, and Gold layers.
+### Data Warehouse Layers
+
+#### Bronze Layer
+Stores raw source data with minimal transformation.
+
+#### Silver Layer
+Applies data cleaning, standardization, and transformation to improve data quality and consistency.
+
+#### Gold Layer
+Contains business-ready views designed for analytical queries and customer and product reporting.
+
+### Gold Layer Data Model
+
+<img src="doc/Star Schema Data model.png" width=800 height=500>
+
+The Gold layer follows a star-schema-style design consisting of a sales_fact view and two dimension views.
+
+- **fact_sales:** Contains sales-related measures and references to customer and product dimensions.
+- **dim_customers:** Provides customer attributes for analysis.
+- **dim_products:** Provides product attributes for analysis.
+
+The sales fact view connects to the customer and product dimension views through their respective keys.
 ## Tools & Technologies
 
 - Database: Microsoft SQL Server
