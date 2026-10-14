@@ -18,7 +18,7 @@ The repository includes datasets, project documentation, SQL scripts, and tests 
 - Follow a structured and maintainable project organization.
 
 ## Data Warehouse Architecture
-<img src="doc/Data Architecture.jpg" width=800 height=600>
+<img src="doc/Data Architecture.jpg" width=800 height=500>
 The project follows a Medallion Architecture with three layers:
 
 - **Bronze Layer:** Stores raw data from source systems.
