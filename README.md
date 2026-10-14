@@ -17,6 +17,9 @@ The repository includes datasets, project documentation, SQL scripts, and tests 
 - Write SQL queries to explore data and generate useful insights.
 - Follow a structured and maintainable project organization.
 
+## Data Warehouse Architecture
+<img src="">
+
 ## Tools & Technologies
 
 - Database: Microsoft SQL Server
