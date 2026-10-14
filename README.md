@@ -49,7 +49,6 @@ Contains business-ready views designed for analytical queries and customer and p
 
 ### Gold Layer Data Model
 
-<img src="doc/Star Schema Data model.png" width=800 height=500>
 
 The Gold layer follows a star-schema-style design consisting of a sales_fact view and two dimension views.
 
