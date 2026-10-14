@@ -38,18 +38,15 @@ The data warehouse integrates data from two source systems:
 The source datasets are processed through the Bronze, Silver, and Gold layers.
 ### Data Warehouse Layers
 
-#### Bronze Layer
-Stores raw source data with minimal transformation.
+**Bronze Layer :** Stores raw source data with minimal transformation.
 
-#### Silver Layer
-Applies data cleaning, standardization, and transformation to improve data quality and consistency.
+**Silver Layer :** Applies data cleaning, standardization, and transformation to improve data quality and consistency.
 
-#### Gold Layer
-Contains business-ready views designed for analytical queries and customer and product reporting.
+**Gold Layer :** Contains business-ready views designed for analytical queries and customer and product reporting.
 
 ### Gold Layer Data Model
 
-<img src="doc/Star Schema Data model.png" width=800 height=500>
+<img src="doc/Star Schema Data model.png" width=800 height=700>
 
 
 The Gold layer follows a star-schema-style design consisting of a sales_fact view and two dimension views.
