@@ -1,6 +1,6 @@
 # SQL-DATA-WAREHOUSE-PROJECT
 
-A SQL Server-based data warehousing project focused on data integration, ETL processes, data modelling, and analytical reporting.
+A SQL Server-based Data Warehouse project implementing a Bronze, Silver, and Gold layered architecture to integrate, clean, and transform CRM and ERP data for analytical reporting.
 
 ## Project Overview
 
@@ -36,8 +36,8 @@ The data warehouse integrates data from two source systems:
 - **ERP:** Provides additional business information used to enrich and analyze the data.
 
 The source datasets are processed through the Bronze, Silver, and Gold layers.
-### Data Warehouse Layers
 
+### Data Warehouse Layers
 **Bronze Layer :** Stores raw source data with minimal transformation.
 
 **Silver Layer :** Applies data cleaning, standardization, and transformation to improve data quality and consistency.
@@ -48,7 +48,6 @@ The source datasets are processed through the Bronze, Silver, and Gold layers.
 
 <img src="doc/Star Schema Data model.png" width=800 height=700>
 
-
 The Gold layer follows a star-schema-style design consisting of a sales_fact view and two dimension views.
 
 - **fact_sales:** Contains sales-related measures and references to customer and product dimensions.
@@ -56,6 +55,13 @@ The Gold layer follows a star-schema-style design consisting of a sales_fact vie
 - **dim_products:** Provides product attributes for analysis.
 
 The sales fact view connects to the customer and product dimension views through their respective keys.
+
+### Data Quality & Validation
+
+Data quality checks are implemented to validate the transformed data across the warehouse layers.
+The validation scripts help identify potential data quality issues and verify the consistency of the processed datasets.
+Key checks include data integrity and consistency validation, based on the implemented SQL test scripts.
+
 ## Tools & Technologies
 
 - Database: Microsoft SQL Server
@@ -64,21 +70,13 @@ The sales fact view connects to the customer and product dimension views through
 
 ## Project Components
 
-<b>1. Datasets</b>
+<b>1. Datasets : </b>Contains the data files used as inputs for the project.
 
-Contains the data files used as inputs for the project.
+<b>2. Documentation : </b>The "doc" folder contains project-related documentation.
 
-<b>2. Documentation</b>
+<b>3. SQL Scripts : </b> The "scripts" folder contains SQL scripts associated with the data warehouse implementation and related operations.
 
-The "doc" folder contains project-related documentation.
-
-<b>3. SQL Scripts</b>
-
-The "scripts" folder contains SQL scripts associated with the data warehouse implementation and related operations.
-
-<b>4. Tests</b>
-
-The "tests" folder contains project test files used to support validation and quality checks.
+<b>4. Tests : </b> The "tests" folder contains project test files used to support validation and quality checks.
 
 ## Workflow
 
@@ -106,7 +104,7 @@ Through this project, I developed practical experience with:
 The repository is organized into the following directories and files:
 
 - datasets/ – Contains the source datasets used in the data warehouse project.
-- doc/ – Intended for project documentation, including architecture and design details. Documentation has not been added to this folder yet.
+- doc/ – Contains data warehouse architecture diagrams, data flow documentation and gold layer data model visulaization.
 - scripts/ – Contains SQL scripts used to implement the data warehouse and perform data processing.
 - tests/ – Intended for testing and validating SQL scripts and data quality.
 - LICENSE – Specifies the licensing terms for the project.
@@ -119,10 +117,6 @@ The repository is organized into the following directories and files:
 2. Open the SQL scripts in "scripts".
 3. Use Microsoft SQL Server and an appropriate SQL development environment to inspect and execute the scripts, after configuring the required database and data paths.
 4. Review the "tests/" folder for available validation or test scripts.
-
- ## About This Project
-
-This project is part of my practical learning journey in SQL, data warehousing, and data analytics. It demonstrates my interest in building structured data solutions and strengthening my technical skills through hands-on projects.
 
  ## Related Project
 
